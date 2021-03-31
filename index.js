@@ -25,18 +25,18 @@ function intern (){
         },
         {
             type:"input",
-           name:"internId",
-           message:"what is the interns id"  
+            name:"internId",
+            message:"what is the interns id"  
         },
         {
             type:"input",
-           name:"internEmail",
-           message:"what is the interns email" 
+            name:"internEmail",
+            message:"what is the interns email" 
         },
         {
             type:"input",
-           name:"internSchool",
-           message:"what is the interns school" 
+            name:"internSchool",
+            message:"what is the interns school" 
         }
     ]).then(answers =>{
         const intern = new Intern(answers.internName,answers.internId,answers.internEmail,answers.internSchool)
@@ -85,28 +85,28 @@ function engineer (){
     inquirer.prompt([
         {
            type:"input",
-           name:"internName",
-           message:"what is the interns name" 
+           name:"engineerName",
+           message:"what is the engineers name" 
         },
         {
             type:"input",
-           name:"internId",
-           message:"what is the interns id"  
+            name:"engineerId",
+            message:"what is the engineers id"  
         },
         {
             type:"input",
-           name:"internEmail",
-           message:"what is the interns email" 
+            name:"engineerEmail",
+            message:"what is the engineers email" 
         },
         {
             type:"input",
-           name:"internSchool",
-           message:"what is the interns school" 
+            name:"engineerGithub",
+            message:"what is the engineers github" 
         }
     ]).then(answers =>{
-        const intern = new Intern(answers.internName,answers.internId,answers.internEmail,answers.internSchool)
-        team.push(intern)
-        id.push(answers.internId)
+        const engineer = new Engineer(answers.engineerName,answers.engineerId,answers.engineerEmail,answers.engineerGithub)
+        team.push(engineer)
+        id.push(answers.engineerId)
         build ()
     })
 }
@@ -114,29 +114,29 @@ function engineer (){
 function manager (){
     inquirer.prompt([
         {
-           type:"input",
-           name:"internName",
-           message:"what is the interns name" 
+            type:"input",
+            name:"managerName",
+            message:"what is the managers name" 
         },
         {
             type:"input",
-           name:"internId",
-           message:"what is the interns id"  
+            name:"managerId",
+            message:"what is the managers id"  
         },
         {
             type:"input",
-           name:"internEmail",
-           message:"what is the interns email" 
+            name:"managerEmail",
+            message:"what is the managers email" 
         },
         {
             type:"input",
-           name:"internSchool",
-           message:"what is the interns school" 
+            name:"managerOfficeNumber",
+            message:"what is the managers office number" 
         }
     ]).then(answers =>{
-        const intern = new Intern(answers.internName,answers.internId,answers.internEmail,answers.internSchool)
-        team.push(intern)
-        id.push(answers.internId)
+        const manager = new Manager(answers.managerName,answers.managerId,answers.managerEmail,answers.managerOfficeNumber)
+        team.push(manager)
+        id.push(answers.managerId)
         build ()
     })
 }
